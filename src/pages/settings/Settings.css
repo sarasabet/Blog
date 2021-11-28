@@ -15,14 +15,14 @@
 }
 
 .settingsTitleUpdate {
-  font-size: 2.5vw;
+  font-size: 1.5em;
   margin-bottom: 1em;
   color: lightcoral;
 }
 
 .settingsTitleDelete {
   color: red;
-  font-size: 1.5vw;
+  font-size: 1.2em;
   cursor: pointer;
 }
 
