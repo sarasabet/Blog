@@ -9,7 +9,7 @@ export default function Post(){
           <span className='postCat'>two</span>
         </div>
         <span className='postTitle'>
-          Laboris sunt aute cupidatat velit
+          Laboris sunt aute 
         </span>
         <hr />
         <span className="postDate">1 hour ago</span>

@@ -30,6 +30,10 @@
   font-size: 1em;
   text-align: center;
 }
+.sidebarDesc{
+  text-align: justify;
+  padding: 0.5em;
+}
 .sidebarItem > p{
   padding: 30px;
   width:35ch;
