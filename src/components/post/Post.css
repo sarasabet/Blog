@@ -1,6 +1,6 @@
 .post{
-  width:40%;
-  margin:2em 3em;
+  width:38%;
+  margin: 2em;
 
 }
 .posrImg{
@@ -45,7 +45,7 @@
 .postDesc {
   font-family: "Varela Round", Arial, Helvetica, sans-serif;
   font-weight: 400;
-  font-size: 2ch;
+  font-size: 1.2vw;
   line-height: 24px;
   color: #444444;
   margin-top: 0.8em;
