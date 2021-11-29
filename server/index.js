@@ -2,6 +2,23 @@ const PORT = 3001;
 const express = require('express');
 const morgan = require ('morgan');
 const cors = require('cors');const app = express();
+const dotenv = require('dotenv');
+const mongoose = require('mongoose')
+dotenv.config();
+
+dotenv.config();
+app.use(express.json());
+// app.use("/images", express.static(path.join(__dirname, "/images")));
+
+mongoose.connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    // useCreateIndex: true,
+    // useFindAndModify:true
+  })
+  .then(console.log("Connected to MongoDB"))
+  .catch((err) => console.log(err));
+
 
 app.use(cors()) // CORS middleware useage
 app.use(morgan('dev'));
