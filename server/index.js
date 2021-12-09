@@ -6,6 +6,7 @@ const dotenv = require('dotenv');
 const mongoose = require('mongoose')
 dotenv.config();
 const autRoute = require('./routes/auth');
+const userRoute = require('./routes/users');
 const { Router } = require('express');
 
 
@@ -31,10 +32,11 @@ app.use(cors({
   optionsSuccessStatus: 200 
 }));
 
-// app.use('/', (req, res)=>{
-//   res.json('here I am!')
-// })
+
 app.use('/api/auth', autRoute)
+app.use('/api/users', userRoute)
+
+
 
 app.listen(PORT , console.log(`Server isslistening on port ${PORT}`))
-
+// https://www.youtube.com/watch?v=OML9f6LXUUs

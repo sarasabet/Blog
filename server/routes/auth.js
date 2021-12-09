@@ -7,20 +7,17 @@ const bcrypt = require('bcrypt');
 //register
 router.post("/register", async (req, res) => {
   try {
-    // generate 10dg salt
     const salt = await bcrypt.genSalt(10);
-    // hash pass with salt
-    const hashedPass = await bcrypt.hash(req.body.password, salt)
-    const newUSer = new User({
+    const hashedPass = await bcrypt.hash(req.body.password, salt);
+    const newUser = new User({
       username: req.body.username,
       email: req.body.email,
-      password: hashedPass
+      password: hashedPass,
+    });
 
-    })
-    const user = await newUSer.save();
+    const user = await newUser.save();
     res.status(200).json(user);
-  }
-  catch (err) {
+  } catch (err) {
     res.status(500).json(err);
   }
 });
@@ -32,7 +29,7 @@ router.post('/login', async(req, res)=> {
 
     const validated = await bcrypt.compare(req.body.password, user.password);
     !validated && res.status(400).json('Wrong credentials')
-// to take out password , an dsend just the necessary detail
+// to take out password , and send just the necessary detail, everything except password
     const {password, ...others} = user._doc
     res.status(200).json(others);
   }catch(err) {
