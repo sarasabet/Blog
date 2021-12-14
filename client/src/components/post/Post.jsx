@@ -1,13 +1,14 @@
 import './Post.css'
+import { Link } from 'react-router-dom';
 export default function Post(props) {
   const post = props.posts
-  console.log(post)
   return (
     <div className='post'>
       {post.photp && (
         <img className='posrImg' src={post.photo} alt=''
         />
       )}
+
       <div className='postInfo'>
         <div classNAme='postCats'>
           {post.categories.map((c) => {
@@ -15,9 +16,11 @@ export default function Post(props) {
           })}
 
         </div>
+        <Link to={`/post/${post._id}`} className='link'>
         <span className='postTitle'>
           {post.title}
         </span>
+        </Link>
         <hr />
         <span className="postDate">{new Date(post.createdAt).toDateString()}</span>
         <p className='postDesc'>
