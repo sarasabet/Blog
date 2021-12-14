@@ -1,7 +1,8 @@
 const PORT = 3001;
 const express = require('express');
 const morgan = require ('morgan');
-const cors = require('cors');const app = express();
+const cors = require('cors');
+const app = express();
 const dotenv = require('dotenv');
 const mongoose = require('mongoose')
 dotenv.config();
@@ -42,10 +43,10 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
 app.use(cors()) // CORS middleware useage
 app.use(morgan('dev'));
 
-// app.use(cors({
-//   origins: 'http://localhost:3000/',
-//   optionsSuccessStatus: 200 
-// }));
+app.use(cors({
+  origins: 'http://localhost:3000/',
+  optionsSuccessStatus: 200 
+}));
 
 
 

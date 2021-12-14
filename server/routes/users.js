@@ -1,7 +1,7 @@
 const router = require('express').Router();
-const User = require('../nodels/User');
+const User = require('../models/User');
 const bcrypt = require("bcrypt");
-const Post = require("../nodels/Posts");
+const Post = require("../models/Post");
 //UPDATE
 router.put("/:id", async (req, res) => {
   if (req.body.userId === req.params.id) {
