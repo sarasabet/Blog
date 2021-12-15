@@ -1,4 +1,4 @@
-.rgeister{
+.register{
   align-items: center;
   height: calc(100vh - 10em);
   display: flex;
@@ -38,7 +38,7 @@
   padding: 0.5em;
   border-radius: 1em;
 }
-.registerLoginrButton{
+.registerLoginButton{
   position: absolute;
   top: 3em;
   right: 4em;
