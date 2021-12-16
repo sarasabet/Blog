@@ -29,7 +29,7 @@
   border: none;
   padding: 1em;
 }
-.loginrButton{
+.loginButton{
   margin-top: 1em;
   cursor: pointer;
   background-color: coral;
@@ -37,6 +37,10 @@
   color: white;
   padding: 0.5em;
   border-radius: 1em;
+}
+.loginButton:disabled{
+  cursor: not-allowed;
+  background-color: blue;
 }
 .loginRegisterButton{
   position: absolute;
