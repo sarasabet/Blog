@@ -12,6 +12,9 @@ const postRoute = require('./routes/posts');
 const categoryRoute = require('./routes/categories');
 const multer = require('multer')
 const { Router } = require('express');
+const path = require('path')
+// to make images folder public 
+app.use("/images", express.static(path.join(__dirname, "/images")));;
 
 
 dotenv.config();

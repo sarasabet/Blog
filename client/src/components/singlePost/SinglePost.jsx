@@ -2,7 +2,7 @@ import './SinglePost.css'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useLocation, Link } from 'react-router-dom'
-
+const PF = "http://localhost:3001/images/"
 
 export default function SinglePost() {
   const [post, setPost] = useState({})
@@ -19,7 +19,7 @@ export default function SinglePost() {
     <div className='singlePost'>
       <div className='singlePostWrapper'>
         {post.photo &&
-          <img src={post.photo}
+          <img src={PF + post.photo}
             alt='singlePostImg'
             className="singlePostImg" />
         }

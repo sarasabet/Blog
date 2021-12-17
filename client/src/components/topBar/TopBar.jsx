@@ -1,49 +1,72 @@
-import './TopBAr.css'
-import { Link } from 'react-router-dom'
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { Context } from "../../context/Context"
+import './TopBar.css'
 
-export default function TopBAr() {
-  const user = false;
+export default function TopBar() {
+  const { user, dispatch } = useContext(Context);
+  const PF = "http://localhost:3001/images/"
+
+
+  const handleLogout = () => {
+    dispatch({ type: "LOGOUT" });
+  };
   return (
     <div className="top">
-      <div className='top-left'>
-        <i className="topIcon fab fa-linkedin"></i>
-        <i className="topIcon fab fa-github-square"></i>
+      <div className="topLeft">
         <i className="topIcon fab fa-facebook-square"></i>
+        <i className="topIcon fab fa-twitter-square"></i>
+        <i className="topIcon fab fa-pinterest-square"></i>
+        <i className="topIcon fab fa-instagram-square"></i>
       </div>
-      <div className='top-center'>
-        <ul className='topList'>
-          <li className='topListItem'>
-            <Link to='/' className='link'>  Home </Link>
+      <div className="topCenter">
+        <ul className="topList">
+          <li className="topListItem">
+            <Link className="link" to="/">
+              HOME
+            </Link>
           </li>
-          <li className='topListItem'><Link to="/about" className='link'>ABOUT</Link></li>
-          <li className='topListItem'><Link to='/contactus' className='link'>CONTACT</Link></li>
-          <li className='topListItem'><Link to='/write' className='link'>WRITE</Link></li>
-
+          <li className="topListItem">
+            <Link className="link" to="/">
+              ABOUT
+            </Link>
+          </li>
+          <li className="topListItem">
+            <Link className="link" to="/">
+              CONTACT
+            </Link>
+          </li>
+          <li className="topListItem">
+            <Link className="link" to="/write">
+              WRITE
+            </Link>
+          </li>
+          <li className="topListItem" onClick={handleLogout}>
+            {user && "LOGOUT"}
+          </li>
         </ul>
       </div>
-      <div className='top-right'>
-
+      <div className="topRight">
         {user ? (
-          <img
-            className="topImg"
-            src="profilePix.jpeg"
-            alt=""
-          />
-        ) :
-          (<ul className='topList'>
-            <li className='topListItem'>
-              <Link to='/login' className='link'>LOGIN</Link>
+          <Link to="/settings">
+            <img className="topImg" src={PF+user.profilePic} alt="" />
+          </Link>
+        ) : (
+          <ul className="topList">
+            <li className="topListItem">
+              <Link className="link" to="/login">
+                LOGIN
+              </Link>
             </li>
-            <span>|</span>
-            <li className='topListItem'>
-              <Link to='/register' className='link'>REGISTER</Link>
+            <li className="topListItem">
+              <Link className="link" to="/register">
+                REGISTER
+              </Link>
             </li>
           </ul>
-          )}
-            <i className="topSearchIcon fas fa-search"></i>
+        )}
+        <i className="topSearchIcon fas fa-search"></i>
       </div>
-
-
     </div>
-  )
+  );
 }
