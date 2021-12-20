@@ -1,52 +1,99 @@
-.singlePost{
-  flex:9;
-  margin: 1em;
+.singlePost {
+  flex: 9;
 }
-.singlePostWrapper{
-  margin: 1em;
 
+.singlePostWrapper {
+  padding: 20px;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
 }
-.singlePostImg{
-  width: 70vw;
-  height: 50vh;
-  border-radius: 2em;
+
+.singlePostImg {
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
   object-fit: cover;
 }
-.singlePOstTitle{
+
+.singlePostTitle {
   text-align: center;
-  margin-top: 0.8em .8em;
-  padding: 1.5em;
-  font-size: 0.9em;
- 
+  margin: 10px;
+  font-family: "Lora", serif;
+  font-size: 28px;
 }
-.singlePostEdit{
+
+.singlePostTitleInput {
+  margin: 10px;
+  font-family: "Lora", serif;
+  font-size: 28px;
+  text-align: center;
+  border: none;
+  color: gray;
+  border-bottom: 1px solid lightgray;
+}
+
+.singlePostTitleInput:focus {
+  outline: none;
+}
+
+.singlePostEdit {
   float: right;
-  margin-top: 0;
+  font-size: 16px;
 }
-.singlePostIcon{
-  padding-left: 0.5em;
+
+.singlePostIcon {
+  margin-left: 10px;
   cursor: pointer;
-  font-size: 0.7em;
 }
-.singlePostIcon:first-child{
-  color:blue;
+
+.singlePostIcon:first-child {
+  color: teal;
 }
-.singlePostIcon:last-child{
-  color:tomato;
+
+.singlePostIcon:last-child {
+  color: tomato;
 }
-.singlePostInfo{
+
+.singlePostInfo {
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
-  font-size: 1.1em;
-  color: #be9656;
-  margin:0.3em;
+  font-size: 16px;
+  font-family: "Varela Round", sans-serif;
+  color: #b39656;
 }
-.singlePOstDesc{
-  font-size: 2vw;
-  line-height: 1.2em;
-  text-align: justify;
+
+.singlePostDesc {
+  color: #666;
+  font-size: 18px;
+  line-height: 25px;
 }
-.singlePOstDesc::first-letter{
-  margin-left: 1.5em;
-  font-size: 1.5em;
+
+.singlePostDesc::first-letter {
+  margin-left: 20px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.singlePostDescInput {
+  border: none;
+  color: #666;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.singlePostDescInput:focus {
+  outline: none;
+}
+.singlePostButton {
+  width: 100px;
+  border: none;
+  background-color: teal;
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-top: 20px;
 }
