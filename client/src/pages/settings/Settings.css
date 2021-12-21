@@ -1,11 +1,11 @@
+
 .settings {
   display: flex;
 }
 
 .settingsWrapper {
   flex: 9;
-  padding-top: 0.5em;
-  padding-left: 2em;
+  padding: 20px;
 }
 
 .settingsTitle {
@@ -14,15 +14,15 @@
   justify-content: space-between;
 }
 
-.settingsTitleUpdate {
-  font-size: 1.5em;
-  margin-bottom: 1em;
+.settingsUpdateTitle {
+  font-size: 30px;
+  margin-bottom: 20px;
   color: lightcoral;
 }
 
-.settingsTitleDelete {
+.settingsDeleteTitle {
   color: red;
-  font-size: 1.2em;
+  font-size: 12px;
   cursor: pointer;
 }
 
@@ -30,53 +30,54 @@
   display: flex;
   flex-direction: column;
 }
-.settingsPP{
+
+.settingsPP {
   display: flex;
   align-items: center;
-  margin: 3em;
+  margin: 10px 0;
 }
 
 .settingsPP > img {
-  height: 100px;
-  width: 100px;
+  width: 70px;
+  height: 70px;
   border-radius: 20px;
   object-fit: cover;
 }
+
 .settingsPPIcon {
-  width: 1em;
-  height: 1em;
-  padding: 0.3em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
-  margin-left: 0.5em;
-  color: white;
   background-color: lightcoral;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
   cursor: pointer;
 }
-.settingsPPInputButtom{
-  display: flex;
-  flex-direction: column;
-  width: 50%;
+
+.settingsForm > label {
+  font-size: 20px;
+  margin-top: 20px;
 }
 
-.settingsPPInputButtom > input {
-  color: rgb(158, 148, 148);
-  margin-top: 1em;
-  margin-bottom: 1em;
-  height: 2.5em;
+.settingsForm > input {
+  color: gray;
+  margin: 10px 0;
+  height: 30px;
   border: none;
   border-bottom: 1px solid lightgray;
 }
 
-
-.settingsSubmitButton{
-
-  color: white;
-  background-color: teal;
-  width: 30%;
-  border-radius: 7px;
-  padding: 0.7em;
+.settingsSubmit{
+    width: 150px;
+    align-self: center;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: teal;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
 }

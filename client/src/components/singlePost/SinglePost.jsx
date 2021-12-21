@@ -47,13 +47,13 @@ export default function SinglePost() {
     })
       .catch((err) => { console.log(err) })
   };
-  console.log(post)
+  
 
   return (
     <div className="singlePost">
       <div className="singlePostWrapper">
         {post.photo && (
-          <img src={PF + post.photo} alt="postPhoto" className="singlePostImg" />
+          <img src={PF + post.photo} alt="" className="singlePostImg" />
         )}
         {updateMode ? (
           <input
