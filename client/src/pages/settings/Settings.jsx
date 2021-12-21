@@ -1,7 +1,11 @@
 import './Settings.css'
 import Sidbar from '../../components/sidbar/Sidbar'
+import { Context } from '../../context/Context'
+import {useContext} from 'react';
+
 
 export default function Settings() {
+  const { user } = useContext(Context);
   return(
     <div className='settings'>
           <div className='settingsWrapper'>
@@ -13,7 +17,7 @@ export default function Settings() {
             <label>Profile</label>
             <div className="settingsPP">
             <img
-              src="https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+              src={user.profilePic}
               alt=""
             />
             <label htmlFor="fileInput">

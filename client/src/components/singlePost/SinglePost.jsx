@@ -16,33 +16,45 @@ export default function SinglePost() {
   const [updateMode, setUpdateMode] = useState(false);
 
   useEffect(() => {
-    const getPost = async () => {
-      const res = await axios.get("/posts/" + path);
-      setPost(res.data);
-      setTitle(res.data.title);
-      setDesc(res.data.desc);
-    };
-    getPost();
+    axios.get("/posts/" + path)
+      .then((res) => {
+        setPost(res.data);
+        setTitle(res.data.title);
+        setDesc(res.data.desc);
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   }, [path]);
 
-  const handleDelete = async () => {
-    try {
-      await axios.delete(`/posts/${post._id}`, {
-        data: { username: user.username },
-      });
+  const handleDelete = () => {
+    axios.delete(`/posts/${post._id}`, {
+      data: { username: user.username },
+    }).then(() => {
       window.location.replace("/");
-    } catch (err) {}
+    }).catch((err) => {
+      console.log(err)
+    })
   };
-
-  const handleUpdate = async () => {
-    try {
-      await axios.put(`/posts/${post._id}`, {
-        username: user.username,
-        title,
-        desc,
-      });
+  // const handleUpdate = async () => {
+  //   try {
+  //     await axios.put(`/posts/${post._id}`, {
+  //       username: user.username,
+  //       title,
+  //       desc,
+  //     });
+  //     setUpdateMode(false)
+  //   } catch (err) { console.log(err) }
+  // };
+  const handleUpdate = () => {
+    axios.put(`/posts/${post._id}`, {
+      username: user.username,
+      title,
+      desc,
+    }).then(() => {
       setUpdateMode(false)
-    } catch (err) {}
+    })
+      .catch((err) => { console.log(err) })
   };
 
   return (
