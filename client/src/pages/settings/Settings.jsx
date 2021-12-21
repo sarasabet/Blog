@@ -2,6 +2,7 @@ import './Settings.css'
 import Sidbar from '../../components/sidbar/Sidbar'
 import { Context } from '../../context/Context'
 import {useContext} from 'react';
+const PF = "http://localhost:3001/images/"
 
 
 export default function Settings() {
@@ -17,8 +18,8 @@ export default function Settings() {
             <label>Profile</label>
             <div className="settingsPP">
             <img
-              src={user.profilePic}
-              alt=""
+              src={PF + user.profilePic}
+              alt="profilePic"
             />
             <label htmlFor="fileInput">
               <i className="settingsPPIcon fas fa-user-circle"></i>{" "}

@@ -36,16 +36,7 @@ export default function SinglePost() {
       console.log(err)
     })
   };
-  // const handleUpdate = async () => {
-  //   try {
-  //     await axios.put(`/posts/${post._id}`, {
-  //       username: user.username,
-  //       title,
-  //       desc,
-  //     });
-  //     setUpdateMode(false)
-  //   } catch (err) { console.log(err) }
-  // };
+
   const handleUpdate = () => {
     axios.put(`/posts/${post._id}`, {
       username: user.username,
@@ -56,12 +47,13 @@ export default function SinglePost() {
     })
       .catch((err) => { console.log(err) })
   };
+  console.log(post)
 
   return (
     <div className="singlePost">
       <div className="singlePostWrapper">
         {post.photo && (
-          <img src={PF + post.photo} alt="" className="singlePostImg" />
+          <img src={PF + post.photo} alt="postPhoto" className="singlePostImg" />
         )}
         {updateMode ? (
           <input
