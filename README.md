@@ -18,11 +18,11 @@ Install dependencies with `npm install`.
 npm start
 ```
 ## Dependencies
-  bcrypt
-  express
-  morgan
-  multer
-  mongoose
-  axios
+  -bcrypt
+  -express
+  -morgan
+  -multer
+  -mongoose
+  -axios
 
 
