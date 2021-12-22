@@ -3,10 +3,10 @@ A multiple Page React/node app that allows users to register/sign-in ands create
 
 ## Final product
 
-!["home page"]()
-!["Single post]()
-!["write a post]()
-!["update profile]()
+!["home page"](https://github.com/sarasabet/Blog/blob/main/docs/homepage.png)
+!["Single post](https://github.com/sarasabet/Blog/blob/main/docs/singlepost.png)
+!["write a post](https://github.com/sarasabet/Blog/blob/main/docs/edit.png)
+!["update profile](https://github.com/sarasabet/Blog/blob/main/docs/profile.png)
 
 ## Setup
 
