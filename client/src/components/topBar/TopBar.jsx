@@ -50,10 +50,14 @@ export default function TopBar() {
       </div>
       <div className="topRight">
         {user ? (
-          <Link to="/settings">
-            <img className="topImg"src={PF +user.profilePic} alt="profilePix" />
-          </Link>
-        ) : (
+                 <Link to="/settings">
+              {
+                user.profilePic ? <img className="topImg" src={PF + user.profilePic} alt="profilePix" /> : <i class="fas fa-user"></i>
+              }
+
+            </Link>
+          ) : (
+
           <ul className="topList">
             <li className="topListItem">
               <Link className="link" to="/login">

@@ -32,7 +32,9 @@ export default function Write() {
       const res = await axios.post("/posts", newPost);
       window.location.replace("/post/" + res.data._id);
     } catch (err) {}
+    console.log(newPost, user)
   };
+
   return (
     <div className="write">
       {file && (
